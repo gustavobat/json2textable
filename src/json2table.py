@@ -65,12 +65,12 @@ def get_rate(vals, ndivs):
 
 def append_rates_line(etapleft, etarleft, exaleft, etapright, etarright, exaright):
     tex_str = 'Rate & ' + \
+              '{:.3f}'.format(exaleft) + ' & ' + \
               '{:.3f}'.format(etapleft) + ' & ' + \
-              '{:.3f}'.format(etarleft) + ' & ' + \
-              '{:.3f}'.format(exaleft) + ' & - & Rate &' + \
+              '{:.3f}'.format(etarleft) + ' & - & Rate &' + \
+              '{:.3f}'.format(exaright) + ' & ' + \
               '{:.3f}'.format(etapright) + ' & ' + \
-              '{:.3f}'.format(etarright) + ' & ' + \
-              '{:.3f}'.format(exaright) + '& - \\\\\n    '
+              '{:.3f}'.format(etarright) + '& - \\\\\n    '
     return tex_str
 
 
