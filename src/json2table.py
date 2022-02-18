@@ -141,11 +141,14 @@ def main():
     '''
     print(tex_str)
 
-    with open("table-media.tex", "w") as text_file:
+    out_file_name = 'table'
+    tex_file_name = out_file_name + '.tex'
+    pdf_file_name = out_file_name + '.pdf'
+    with open(tex_file_name, "w") as text_file:
         text_file.write(tex_str)
 
-    os.system("pdflatex table-media.tex")
-    os.system("evince table-media.pdf")
+    os.system("pdflatex " + tex_file_name)
+    os.system("evince " + pdf_file_name)
 
 
 if __name__ == "__main__":
